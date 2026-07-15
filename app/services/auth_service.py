@@ -7,7 +7,6 @@ from app.core.security import (
 )
 from app.models.user import User
 from app.schemas.auth import (
-    LoginRequest,
     RegisterRequest,
 )
 
@@ -42,13 +41,14 @@ class AuthService:
 
     @staticmethod
     def login(
-        db: Session,
-        data: LoginRequest,
-    ) -> str:
+            db: Session,
+            email: str,
+            password: str,
+    ):
 
         user = (
             db.query(User)
-            .filter(User.email == data.email)
+            .filter(User.email == email)
             .first()
         )
 
@@ -56,7 +56,7 @@ class AuthService:
             raise ValueError("Invalid email or password")
 
         if not verify_password(
-            data.password,
+            password,
             user.hashed_password,
         ):
             raise ValueError("Invalid email or password")
