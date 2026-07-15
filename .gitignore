@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+.venv/
+
+# Environment
+.env
+
+# IDE
+.idea/
+
+# PyCharm
+*.iml
+
+# Alembic
+alembic/versions/__pycache__/
+
+# Testing
+.pytest_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# OS
+Thumbs.db
+.DS_Store
