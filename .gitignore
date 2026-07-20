@@ -11,20 +11,13 @@ __pycache__/
 
 # IDE
 .idea/
-
-# PyCharm
 *.iml
-
-# Alembic
-alembic/versions/__pycache__/
 
 # Testing
 .pytest_cache/
-
-# Coverage
 .coverage
 htmlcov/
 
 # OS
-Thumbs.db
 .DS_Store
+Thumbs.db
